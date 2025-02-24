@@ -1,11 +1,14 @@
 <script>
     import Header from "../parts/Header.svelte";
     import Footer from "../parts/Footer.svelte";
-    import If from "./If.svelte";
-    import Each from "./Each.svelte";
-    import Key from "./Key.svelte";
-    import Await from "./Await.svelte";
-    import Snippet from "./Snippet.svelte";
+    import If from "./Syntax/If.svelte";
+    import Each from "./Syntax/Each.svelte";
+    import Key from "./Syntax/Key.svelte";
+    import Await from "./Syntax/Await.svelte";
+    import Snippet from "./Syntax/Snippet.svelte";
+    import Html from "./Syntax/Html.svelte";
+    import Const from "./Syntax/Const.svelte";
+    import Debug from "./Syntax/Debug.svelte";
 </script>
 
 <svelte:head>
@@ -40,9 +43,26 @@
                 <li>
                     <p class="basic">&#123;#snippet&#125;...</p>
                     <p class="desc">reactの再利用コンポーネントのような感じ</p>
-                </li>        <li>
+                </li>
+                <li>
                     <p class="basic">&#123;@render&#125;...</p>
                     <p class="desc">snippetをレンダリングするためのタグ</p>
+                </li>
+                <li>
+                    <p class="basic">&#123;@html&#125;...</p>
+                    <p class="desc">文字列のHTMLタグを有効にする</p>
+                </li>
+                <li>
+                    <p class="basic">&#123;@const&#125;...</p>
+                    <p class="desc">&#123; &#125;ブロック内で使用するローカル定数</p>
+                </li>
+                <li>
+                    <p class="basic">&#123;@debug&#125;...</p>
+                    <p class="desc">console.log()の役割</p>
+                </li>
+                <li>
+                    <p class="basic">bind:</p>
+                    <p class="desc">バインドされた値を更新する</p>
                 </li>
             </ul>
         </div>
@@ -52,6 +72,9 @@
         <Key />
         <Await />
         <Snippet />
+        <Html />
+        <Const />
+        <Debug />
     </div>
 
     <Footer/>
