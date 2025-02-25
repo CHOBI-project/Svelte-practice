@@ -16,6 +16,8 @@
 <div>
     <h3>&#123;#snippet name(引数)&#125;...&#123;/snippet&#125; → &#123;@render name(引数)&#125;</h3>
 
+    {@debug menus}
+
     {#snippet information(item: Menu)}
         <p>id : {item.id}</p>
         <p>name: {item.name}</p>

@@ -1,11 +1,20 @@
 <script>
     import Header from "../parts/Header.svelte";
     import Footer from "../parts/Footer.svelte";
-    import If from "./If.svelte";
-    import Each from "./Each.svelte";
-    import Key from "./Key.svelte";
-    import Await from "./Await.svelte";
-    import Snippet from "./Snippet.svelte";
+    import If from "./Syntax/If.svelte";
+    import Each from "./Syntax/Each.svelte";
+    import Key from "./Syntax/Key.svelte";
+    import Await from "./Syntax/Await.svelte";
+    import Snippet from "./Syntax/Snippet.svelte";
+    import Html from "./Syntax/Html.svelte";
+    import Const from "./Syntax/Const.svelte";
+    import Debug from "./Syntax/Debug.svelte";
+    import Bind from "./Directive/Bind.svelte";
+    import Use from "./Directive/Use.svelte";
+    import Transition from "./Directive/Transition.svelte";
+    import InOut from "./Directive/InOut.svelte";
+    import Animate from "./Directive/Animate.svelte";
+    import Style from "./Directive/Style.svelte";
 </script>
 
 <svelte:head>
@@ -40,9 +49,46 @@
                 <li>
                     <p class="basic">&#123;#snippet&#125;...</p>
                     <p class="desc">reactの再利用コンポーネントのような感じ</p>
-                </li>        <li>
+                </li>
+                <li>
                     <p class="basic">&#123;@render&#125;...</p>
                     <p class="desc">snippetをレンダリングするためのタグ</p>
+                </li>
+                <li>
+                    <p class="basic">&#123;@html&#125;...</p>
+                    <p class="desc">文字列のHTMLタグを有効にする</p>
+                </li>
+                <li>
+                    <p class="basic">&#123;@const&#125;...</p>
+                    <p class="desc">&#123; &#125;ブロック内で使用するローカル定数</p>
+                </li>
+                <li>
+                    <p class="basic">&#123;@debug&#125;...</p>
+                    <p class="desc">console.log()の役割</p>
+                </li>
+                <li>
+                    <p class="basic">bind:</p>
+                    <p class="desc">バインドされた値を更新する</p>
+                </li>
+                <li>
+                    <p class="basic">use:</p>
+                    <p class="desc">要素マウント時に呼び出される関数</p>
+                </li>
+                <li>
+                    <p class="basic">transition:</p>
+                    <p class="desc">DOMに要素が出入りする際に指定したアニメーションがトリガーされる</p>
+                </li>
+                <li>
+                    <p class="basic">in:, out:</p>
+                    <p class="desc">transition:のアニメーションのinとoutのアニメーションを指定する</p>
+                </li>
+                <li>
+                    <p class="basic">animate:</p>
+                    <p class="desc">eachブロック内でのアニメーション</p>
+                </li>
+                <li>
+                    <p class="basic">style:</p>
+                    <p class="desc">cssのスタイルを当てる</p>
                 </li>
             </ul>
         </div>
@@ -52,6 +98,15 @@
         <Key />
         <Await />
         <Snippet />
+        <Html />
+        <Const />
+        <Debug />
+        <Bind />
+        <Use />
+        <Transition />
+        <InOut />
+        <Animate />
+        <Style />
     </div>
 
     <Footer/>

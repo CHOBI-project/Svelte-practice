@@ -1,19 +1,14 @@
-<!-- js -->
 <script lang="ts">
-  import Bindable1 from "./Bindable1.svelte";
-
-  let message = $state("Hello");
+    const message = "<div><h1>Hello Svelte</h1><p>javascriptのフレームワークです。</p></div>";
 </script>
 
-<!-- html -->
-
 <div>
-    <h3>$Bindable</h3>
-
-    <p>message: {message}</p>
-    <Bindable1 bind:value={message}/>
+    <h3>&#123;@html value&#125;</h3>
+    <div>{message}</div>
+    <div>{@html message}</div>
 </div>
 
+<!-- css -->
 <style>
     div {
         margin: 1rem 0;
@@ -26,7 +21,6 @@
             margin-bottom: 0.5rem;
             color: #ff3c00;
             border-bottom: 2px dotted lightgray;
-
         }
     }
 </style>

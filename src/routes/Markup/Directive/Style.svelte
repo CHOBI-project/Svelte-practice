@@ -1,17 +1,10 @@
-<!-- js -->
 <script lang="ts">
-  import Bindable1 from "./Bindable1.svelte";
-
-  let message = $state("Hello");
+    const textColor = "gray";
 </script>
 
-<!-- html -->
-
 <div>
-    <h3>$Bindable</h3>
-
-    <p>message: {message}</p>
-    <Bindable1 bind:value={message}/>
+    <h3>style:property</h3>
+    <div style:color={textColor}>style</div>
 </div>
 
 <style>
@@ -26,7 +19,9 @@
             margin-bottom: 0.5rem;
             color: #ff3c00;
             border-bottom: 2px dotted lightgray;
-
         }
     }
 </style>
+
+
+
