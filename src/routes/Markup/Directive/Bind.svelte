@@ -1,17 +1,12 @@
-<!-- js -->
 <script lang="ts">
-  import Bindable1 from "./Bindable1.svelte";
-
-  let message = $state("Hello");
+  let text = $state("初期テキスト");
 </script>
 
-<!-- html -->
-
 <div>
-    <h3>$Bindable</h3>
+    <h3>bind:property</h3>
 
-    <p>message: {message}</p>
-    <Bindable1 bind:value={message}/>
+    <p>入力内容: {text}</p>
+    <input bind:value={text} />
 </div>
 
 <style>
@@ -26,7 +21,13 @@
             margin-bottom: 0.5rem;
             color: #ff3c00;
             border-bottom: 2px dotted lightgray;
+        }
 
+        input {
+            border: 1px solid gray;
+            border-radius: 5px;
+            padding: 0.2rem;
         }
     }
 </style>
+

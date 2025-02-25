@@ -9,6 +9,12 @@
     import Html from "./Syntax/Html.svelte";
     import Const from "./Syntax/Const.svelte";
     import Debug from "./Syntax/Debug.svelte";
+    import Bind from "./Directive/Bind.svelte";
+    import Use from "./Directive/Use.svelte";
+    import Transition from "./Directive/Transition.svelte";
+    import InOut from "./Directive/InOut.svelte";
+    import Animate from "./Directive/Animate.svelte";
+    import Style from "./Directive/Style.svelte";
 </script>
 
 <svelte:head>
@@ -64,6 +70,26 @@
                     <p class="basic">bind:</p>
                     <p class="desc">バインドされた値を更新する</p>
                 </li>
+                <li>
+                    <p class="basic">use:</p>
+                    <p class="desc">要素マウント時に呼び出される関数</p>
+                </li>
+                <li>
+                    <p class="basic">transition:</p>
+                    <p class="desc">DOMに要素が出入りする際に指定したアニメーションがトリガーされる</p>
+                </li>
+                <li>
+                    <p class="basic">in:, out:</p>
+                    <p class="desc">transition:のアニメーションのinとoutのアニメーションを指定する</p>
+                </li>
+                <li>
+                    <p class="basic">animate:</p>
+                    <p class="desc">eachブロック内でのアニメーション</p>
+                </li>
+                <li>
+                    <p class="basic">style:</p>
+                    <p class="desc">cssのスタイルを当てる</p>
+                </li>
             </ul>
         </div>
 
@@ -75,6 +101,12 @@
         <Html />
         <Const />
         <Debug />
+        <Bind />
+        <Use />
+        <Transition />
+        <InOut />
+        <Animate />
+        <Style />
     </div>
 
     <Footer/>
