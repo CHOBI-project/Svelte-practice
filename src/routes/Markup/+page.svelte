@@ -86,6 +86,10 @@
                     <p class="basic">animate:</p>
                     <p class="desc">eachブロック内でのアニメーション</p>
                 </li>
+                <li>
+                    <p class="basic">style:</p>
+                    <p class="desc">cssのスタイルを当てる</p>
+                </li>
             </ul>
         </div>
 
