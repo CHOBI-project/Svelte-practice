@@ -8,8 +8,9 @@
 
     <nav>
         <ul>
-            <li><a href="../Rune">Rune</a></li>
-            <li><a href="../Markup">Markup</a></li>
+            <li><a href="../rune">Rune</a></li>
+            <li><a href="../markup">Markup</a></li>
+            <li><a href="../elements">Elements</a></li>
         </ul>
     </nav>
 </header>
