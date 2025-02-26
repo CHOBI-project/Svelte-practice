@@ -1,20 +1,20 @@
 <script>
     import Header from "../parts/Header.svelte";
     import Footer from "../parts/Footer.svelte";
-    import If from "./Syntax/If.svelte";
-    import Each from "./Syntax/Each.svelte";
-    import Key from "./Syntax/Key.svelte";
-    import Await from "./Syntax/Await.svelte";
-    import Snippet from "./Syntax/Snippet.svelte";
-    import Html from "./Syntax/Html.svelte";
-    import Const from "./Syntax/Const.svelte";
-    import Debug from "./Syntax/Debug.svelte";
-    import Bind from "./Directive/Bind.svelte";
-    import Use from "./Directive/Use.svelte";
-    import Transition from "./Directive/Transition.svelte";
-    import InOut from "./Directive/InOut.svelte";
-    import Animate from "./Directive/Animate.svelte";
-    import Style from "./Directive/Style.svelte";
+    import If from "./syntax/If.svelte";
+    import Each from "./syntax/Each.svelte";
+    import Key from "./syntax/Key.svelte";
+    import Await from "./syntax/Await.svelte";
+    import Snippet from "./syntax/Snippet.svelte";
+    import Html from "./syntax/Html.svelte";
+    import Const from "./syntax/Const.svelte";
+    import Debug from "./syntax/Debug.svelte";
+    import Bind from "./directive/Bind.svelte";
+    import Use from "./directive/Use.svelte";
+    import Transition from "./directive/Transition.svelte";
+    import InOut from "./directive/InOut.svelte";
+    import Animate from "./directive/Animate.svelte";
+    import Style from "./directive/Style.svelte";
 </script>
 
 <svelte:head>
