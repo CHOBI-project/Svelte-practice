@@ -14,7 +14,6 @@
     import Transition from "./directive/Transition.svelte";
     import InOut from "./directive/InOut.svelte";
     import Animate from "./directive/Animate.svelte";
-    import Style from "./directive/Style.svelte";
 </script>
 
 <svelte:head>
@@ -86,10 +85,6 @@
                     <p class="basic">animate:</p>
                     <p class="desc">eachブロック内でのアニメーション</p>
                 </li>
-                <li>
-                    <p class="basic">style:</p>
-                    <p class="desc">cssのスタイルを当てる</p>
-                </li>
             </ul>
         </div>
 
@@ -106,7 +101,6 @@
         <Transition />
         <InOut />
         <Animate />
-        <Style />
     </div>
 
     <Footer/>

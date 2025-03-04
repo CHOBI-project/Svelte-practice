@@ -4,6 +4,7 @@
     import Global from "./Global.svelte";
     import Custom from "./Custom.svelte";
     import Class from "./Class.svelte";
+    import Style from "./Style.svelte";
 </script>
 
 <svelte:head>
@@ -20,7 +21,11 @@
         <div class="style">
             <ul>
                 <li>
-                    <p class="property">:global </p>
+                    <p class="property">style:</p>
+                    <p class="desc">今までのstyle属性は複数かけるが見にくかったが1ずつ記述できる</p>
+                </li>
+                <li>
+                    <p class="property">:global</p>
                     <p class="desc">全体適用style</p>
                 </li>
                 <li>
@@ -34,6 +39,7 @@
             </ul>
         </div>
 
+        <Style />
         <Global />
         <Custom />
         <Class />
