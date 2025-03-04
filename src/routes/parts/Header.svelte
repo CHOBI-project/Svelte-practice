@@ -11,6 +11,7 @@
             <li><a href="../rune">Rune</a></li>
             <li><a href="../markup">Markup</a></li>
             <li><a href="../elements">Elements</a></li>
+            <li><a href="../store">Store</a></li>
         </ul>
     </nav>
 </header>
