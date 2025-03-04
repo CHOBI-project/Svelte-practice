@@ -18,7 +18,7 @@ import Element from "./Element.svelte";
 <div class="contents">
     <div class="wrapper">
         <h2>Special Elements</h2>
-        <p></p>
+        <p>通常のHTMLタグとは異なる特殊な動作を持つSvelteコンパイラによって特別に解釈される要素。</p>
 
         <div class="elements">
             <ul>
