@@ -6,7 +6,6 @@
 </script>
 
 <!-- html -->
-
 <div>
     <h3>$Bindable</h3>
 

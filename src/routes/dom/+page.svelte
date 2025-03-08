@@ -1,7 +1,7 @@
 <script>
     import Header from "../parts/Header.svelte";
     import Footer from "../parts/Footer.svelte";
-    import AddAndRemove from "./AddAndRemove.svelte";
+    import Todo from "./Todo/App.svelte";
 </script>
 
 <svelte:head>
@@ -15,7 +15,7 @@
         <h2>Dom操作</h2>
         <p>svelteのdom操作はbooleanで行うことを推奨している</p>
 
-        <AddAndRemove />
+        <Todo />
     </div>
 
     <Footer/>
