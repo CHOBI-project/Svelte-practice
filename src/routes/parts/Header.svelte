@@ -13,6 +13,8 @@
             <li><a href="../elements">Elements</a></li>
             <li><a href="../style">Style</a></li>
             <li><a href="../store">Store</a></li>
+            <li><a href="../animation">Animation</a></li>
+            <li><a href="../dom">Dom操作</a></li>
         </ul>
     </nav>
 </header>
