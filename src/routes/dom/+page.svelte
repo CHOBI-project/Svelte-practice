@@ -1,7 +1,7 @@
 <script>
     import Header from "../parts/Header.svelte";
     import Footer from "../parts/Footer.svelte";
-    import Todo from "./Todo/App.svelte";
+    import Todo from "./Todo2/App.svelte";
 </script>
 
 <svelte:head>
