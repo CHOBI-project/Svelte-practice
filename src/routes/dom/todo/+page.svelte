@@ -1,0 +1,107 @@
+<script lang="ts">
+  import Header from "../../parts/Header.svelte";
+  import Todos from "./Todos.svelte";
+  import TodoFilters from "./TodoFilters.svelte";
+
+  type Todo = {
+    text: string
+    done: boolean
+  }
+
+  type Filters = 'all' | 'active' | 'completed'
+
+  let todos = $state<Todo[]>([])
+  let filter = $state<Filters>('all')
+  let filterdTodos = $derived(filterTodos())
+
+  $effect(() => {
+    const savedTodos = localStorage.getItem('todos')
+    savedTodos && (todos = JSON.parse(savedTodos))
+  })
+
+  $effect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos))
+  })
+
+  function addTodo(event: KeyboardEvent) {
+    if (event.key !== 'Enter') return
+
+    const eventEl = event.target as HTMLInputElement
+    const text = eventEl.value
+    const done = false
+
+    todos = [...todos, {text, done}]
+
+    eventEl.value = ''
+  }
+
+  function editTodo(event: Event) {
+    const inputEl = event.target as HTMLInputElement
+    const index = +inputEl.dataset.index!　//+文字列を数値に変換, !null,undefined出ないと保証する
+    todos[index].text = inputEl.value
+  }
+
+  function toggleTodo(event: Event) {
+    const inputEl = event.target as HTMLInputElement
+    const index = +inputEl.dataset.index!
+    todos[index].done = !todos[index].done
+  }
+
+  function setFilter(newFilters: Filters) {
+    filter = newFilters
+  }
+
+  function filterTodos() {
+    switch (filter) {
+      case 'all':
+        return todos
+      case 'active':
+        return todos.filter((todo) => !todo.done)
+      case 'completed':
+        return todos.filter((todo) => todo.done)
+    }
+  }
+
+  function remaining() {
+    return todos.filter((todo) => !todo.done).length
+  }
+
+  function storageClear() {
+    window.localStorage.clear()
+  }
+</script>
+
+<Header/>
+<div class="container">
+  <input onkeydown={addTodo} placeholder="Add todo" type="text">
+
+  <Todos {filterdTodos} {editTodo} {toggleTodo} />
+  <TodoFilters {setFilter} />
+
+  <p>{remaining()} remaining</p>
+  <button onclick={storageClear}>storage clear</button>
+</div>
+
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    input {
+        padding: 1rem;
+        border: 1px solid gray;
+        border-radius: 5px;
+    }
+
+    button {
+        padding: 0 0.25rem;
+        border: 1px solid gray;
+        border-radius: 5px;
+        background: #444444;
+        color: #fff;
+    }
+</style>

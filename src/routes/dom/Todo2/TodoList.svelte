@@ -1,21 +1,16 @@
 <script lang="ts">
   import Todo from "./Todo.svelte";
   import Edit from "./Edit.svelte";
-  import type {TextArray} from "./types";
 
-  type TodoListProps = {
-    textArray: TextArray[];
-  }
-
-  let { textArray }: TodoListProps = $props();
+  let { todoList, editTextHandler, saveTextHandler, removeTextHandler } = $props();
 </script>
 
-{#each textArray as text (text.id)}
+{#each todoList as todo (todo.id)}
   <div>
-    {#if text.flag}
-      <Edit textArray={textArray} text={text} />
+    {#if !todo.edit}
+      <Todo {editTextHandler} {removeTextHandler} {todo} />
     {:else}
-      <Todo textArray={textArray} text={text} />
+      <Edit {saveTextHandler} {todo} />
     {/if}
   </div>
 {/each}
