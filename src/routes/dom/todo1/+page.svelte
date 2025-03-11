@@ -27,11 +27,9 @@
     if (event.key !== 'Enter') return
 
     const eventEl = event.target as HTMLInputElement
-    const text = eventEl.value
-    const done = false
+    if (!eventEl.value.trim()) return;
 
-    todos = [...todos, {text, done}]
-
+    todos.push({text: eventEl.value, done: false})
     eventEl.value = ''
   }
 

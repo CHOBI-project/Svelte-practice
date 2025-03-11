@@ -1,7 +1,7 @@
 <script>
     import Header from "../parts/Header.svelte";
     import Footer from "../parts/Footer.svelte";
-    import Todo from "./Todo2/App.svelte";
+    import TodoScreen from "./todo2/TodoScreen.svelte";
 </script>
 
 <svelte:head>
@@ -15,7 +15,7 @@
         <h2>Dom操作</h2>
         <p>svelteのdom操作はbooleanで行うことを推奨している</p>
 
-        <Todo />
+        <TodoScreen />
     </div>
 
     <Footer/>
