@@ -15,6 +15,7 @@
             <li><a href="../store">Store</a></li>
             <li><a href="../animation">Animation</a></li>
             <li><a href="../dom">Dom操作</a></li>
+            <li><a href="../dom/todo1">お手本</a></li>
         </ul>
     </nav>
 </header>
