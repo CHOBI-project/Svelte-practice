@@ -1,9 +1,7 @@
-<!-- js -->
 <script lang="ts">
   let count = $state(0);
 </script>
 
-<!-- html -->
 <div>
     <h3>$State</h3>
 
@@ -12,7 +10,6 @@
     <button type="button" onclick={() => count++}>+</button>
 </div>
 
-<!-- css -->
 <style>
     div {
         margin: 1rem 0;

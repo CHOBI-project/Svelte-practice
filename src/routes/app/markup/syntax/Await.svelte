@@ -16,18 +16,18 @@
 </script>
 
 <div>
-    <h3>&#123;#await expression&#125;...&#123;:then name&#125;...&#123;:catch name&#125;...&#123;/await&#125;</h3>
-    <button onclick={() => promise = roll()}>
-        サイコロ振る
-    </button>
+  <h3>&#123;#await expression&#125;...&#123;:then name&#125;...&#123;:catch name&#125;...&#123;/await&#125;</h3>
+  <button onclick={() => promise = roll()}>
+    サイコロ振る
+  </button>
 
-    {#await promise}
-        <p>Loading...</p>
-    {:then number}
-        <p>抽選No.{number}</p>
-    {:catch error}
-        <p style="color: red">{error.message}</p>
-    {/await}
+  {#await promise}
+    <p>Loading...</p>
+  {:then number}
+    <p>抽選No.{number}</p>
+  {:catch error}
+    <p style="color: red">{error.message}</p>
+  {/await}
 </div>
 
 <!-- css -->

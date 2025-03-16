@@ -1,6 +1,6 @@
 <script>
-    import TodoScreen from "./todo2/TodoScreen.svelte";
-    import TodoDisplay from "./todo1/TodoDisplay.svelte";
+import TodoDisplay from "$appRoutes/dom/todo1/TodoDisplay.svelte";
+import TodoScreen from "$appRoutes/dom/todo2/TodoScreen.svelte";
 </script>
 
 <svelte:head>

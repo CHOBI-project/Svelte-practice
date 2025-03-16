@@ -1,11 +1,9 @@
-<!-- js -->
 <script lang="ts">
-  import Props1 from "./Props1.svelte";
+  import Props1 from "$appRoutes/rune/Props1.svelte";
 
   let num = $state(0);
 </script>
 
-<!-- html -->
 <div>
     <h3>$Props</h3>
 
@@ -17,7 +15,6 @@
     <Props1/>
 </div>
 
-<!-- css -->
 <style>
     div {
         margin: 1rem 0;

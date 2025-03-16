@@ -1,9 +1,7 @@
-<!-- js -->
 <script lang="ts">
     let { value = $bindable() } = $props();
 </script>
 
-<!-- html -->
 <input type="text" bind:value={value} />
 
 <style>

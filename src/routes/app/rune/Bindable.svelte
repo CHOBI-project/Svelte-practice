@@ -1,11 +1,9 @@
-<!-- js -->
 <script lang="ts">
-  import Bindable1 from "./Bindable1.svelte";
+  import Bindable1 from "$appRoutes/rune/Bindable1.svelte";
 
   let message = $state("Hello");
 </script>
 
-<!-- html -->
 <div>
     <h3>$Bindable</h3>
 

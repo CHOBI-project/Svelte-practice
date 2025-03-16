@@ -1,7 +1,7 @@
 <script>
-    import Button1 from "./Button1.svelte";
-    import Loading from "./Loading.svelte";
-    import Cursor from "./Cursor.svelte";
+    import Button1 from "$appRoutes/animation/Button1.svelte";
+    import Loading from "$appRoutes/animation/Loading.svelte";
+    import Cursor from "$appRoutes/animation/Cursor.svelte";
 </script>
 
 <svelte:head>

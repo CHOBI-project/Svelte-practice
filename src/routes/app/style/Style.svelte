@@ -1,17 +1,17 @@
 <script lang="ts">
-    const textColor = "gray";
-    const background = "lightblue";
+  const textColor = "gray";
+  const background = "lightblue";
 </script>
 
 <div>
-    <h3>style:property</h3>
-    <div
-            style:color={textColor}
-            style:background={background}
-    >
-        style
-    </div>
-    <p class="global">:globalでスタイリングされています</p>
+  <h3>style:property</h3>
+  <div
+          style:color={textColor}
+          style:background={background}
+  >
+    style
+  </div>
+  <p class="global">:globalでスタイリングされています</p>
 </div>
 
 <style>

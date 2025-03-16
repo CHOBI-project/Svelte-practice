@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Todos from "./Todos.svelte";
-  import TodoFilters from "./TodoFilters.svelte";
+  import Todos from "$appRoutes/dom/todo1/Todos.svelte";
+  import TodoFilters from "$appRoutes/dom/todo1/TodoFilters.svelte";
 
   type Todo = {
     text: string
@@ -74,14 +74,13 @@
   <div class="container">
     <input onkeydown={addTodo} placeholder="Add todo" type="text">
 
-    <Todos {filterdTodos} {editTodo} {toggleTodo} />
-    <TodoFilters {setFilter} />
+    <Todos {filterdTodos} {editTodo} {toggleTodo}/>
+    <TodoFilters {setFilter}/>
 
     <p>{remaining()} remaining</p>
     <button onclick={storageClear}>storage clear</button>
   </div>
 </div>
-
 
 
 <style>

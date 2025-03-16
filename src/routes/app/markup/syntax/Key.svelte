@@ -1,6 +1,6 @@
 <script lang="ts">
-    import Key1 from "./Key1.svelte";
-    
+    import Key1 from "$appRoutes/markup/syntax/Key1.svelte";
+
     let id = 1;
 </script>
 
@@ -13,7 +13,6 @@
     {/key}
 </div>
 
-<!-- css -->
 <style>
     div {
         margin: 1rem 0;

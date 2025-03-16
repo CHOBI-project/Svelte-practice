@@ -1,10 +1,10 @@
 <script>
-    import State from "./State.svelte";
-    import Derived from "./Derived.svelte";
-    import Effect from "./Effect.svelte";
-    import Props from "./Props.svelte";
-    import Bindable from "./Bindable.svelte";
-    import Inspect from "./Inspect.svelte";
+    import State from "$appRoutes/rune/State.svelte";
+    import Derived from "$appRoutes/rune/Derived.svelte";
+    import Effect from "$appRoutes/rune/Effect.svelte";
+    import Props from "$appRoutes/rune/Props.svelte";
+    import Bindable from "$appRoutes/rune/Bindable.svelte";
+    import Inspect from "$appRoutes/rune/Inspect.svelte";
 </script>
 
 <svelte:head>
@@ -14,7 +14,8 @@
 
 <div class="wrapper">
   <h2>Rune(ルーン)</h2>
-  <p>Runeは「.svelteファイル」や「.svelte.js/.svelte.tsファイル」で使用するシンボルで、Svelteコンパイラをコントロールします。</p>
+  <p>
+    Runeは「.svelteファイル」や「.svelte.js/.svelte.tsファイル」で使用するシンボルで、Svelteコンパイラをコントロールします。</p>
 
   <div class="runes">
     <ul>

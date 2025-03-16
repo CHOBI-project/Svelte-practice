@@ -8,7 +8,6 @@
     <div>{@html message}</div>
 </div>
 
-<!-- css -->
 <style>
     div {
         margin: 1rem 0;

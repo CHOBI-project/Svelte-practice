@@ -1,6 +1,6 @@
 <div>
-    <h3>:global(セレクタ)</h3>
-    <p class="global">:globalでスタイリングされています</p>
+  <h3>:global(セレクタ)</h3>
+  <p class="global">:globalでスタイリングされています</p>
 </div>
 
 <style>

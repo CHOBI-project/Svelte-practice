@@ -1,4 +1,4 @@
-import {data} from "./data";
+import {data} from "$appRoutes/routing/data";
 
 export function load() {
   return {

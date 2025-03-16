@@ -1,15 +1,15 @@
 <script>
-    import CustomProperty from "./CustomProperty.svelte";
+    import CustomProperty from "$appRoutes/style/CustomProperty.svelte";
 </script>
 
 <div>
-    <h3>--property="値", var(--property)</h3>
+  <h3>--property="値", var(--property)</h3>
 
-    <CustomProperty --color="red" />
-    <CustomProperty --color="green" />
-    <CustomProperty --color="blue" />
+  <CustomProperty --color="red"/>
+  <CustomProperty --color="green"/>
+  <CustomProperty --color="blue"/>
 
-    <p class="global">:globalでスタイリングされています</p>
+  <p class="global">:globalでスタイリングされています</p>
 </div>
 
 <style>
