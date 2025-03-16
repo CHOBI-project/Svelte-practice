@@ -1,5 +1,4 @@
 <script>
-    import Header from "../parts/Header.svelte";
     import Footer from "../parts/Footer.svelte";
     import Button1 from "./Button1.svelte";
     import Loading from "./Loading.svelte";
@@ -11,7 +10,6 @@
     <meta name="description" content="Animation作成"/>
 </svelte:head>
 
-<Header/>
 <div class="contents">
     <div class="wrapper">
         <h2>Animation</h2>

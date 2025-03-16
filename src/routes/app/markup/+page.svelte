@@ -1,5 +1,4 @@
 <script>
-    import Header from "../parts/Header.svelte";
     import Footer from "../parts/Footer.svelte";
     import If from "./syntax/If.svelte";
     import Each from "./syntax/Each.svelte";
@@ -21,7 +20,6 @@
     <meta name="description" content="Markupについての勉強"/>
 </svelte:head>
 
-<Header/>
 <div class="contents">
     <div class="wrapper">
         <h2>Markup</h2>

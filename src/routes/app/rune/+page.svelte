@@ -5,7 +5,6 @@
     import Props from "./Props.svelte";
     import Bindable from "./Bindable.svelte";
     import Inspect from "./Inspect.svelte";
-    import Header from "../parts/Header.svelte";
     import Footer from "../parts/Footer.svelte";
 </script>
 
@@ -14,7 +13,6 @@
     <meta name="description" content="Rune(ルーン)についての勉強"/>
 </svelte:head>
 
-<Header/>
 <div class="contents">
     <div class="wrapper">
         <h2>Rune(ルーン)</h2>

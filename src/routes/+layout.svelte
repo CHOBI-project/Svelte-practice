@@ -1,24 +1,24 @@
-<!-- js -->
-<script>
+<script lang="ts">
+  let { children } = $props()
 </script>
 
-<!-- html -->
 <header>
-    <a href="/"><img src="/src/assets/svelte-horizontal.png" alt="Svelte" width=150></a>
+  <a href="/"><img src="/src/assets/svelte-horizontal.png" alt="Svelte" width=150></a>
 
-    <nav>
-        <ul>
-            <li><a href="../rune">Rune</a></li>
-            <li><a href="../markup">Markup</a></li>
-            <li><a href="../elements">Elements</a></li>
-            <li><a href="../style">Style</a></li>
-            <li><a href="../store">Store</a></li>
-            <li><a href="../animation">Animation</a></li>
-            <li><a href="../dom">Dom操作</a></li>
-            <li><a href="../dom/todo1">お手本</a></li>
-        </ul>
-    </nav>
+  <nav>
+    <ul>
+      <li><a href="../app/rune">Rune</a></li>
+      <li><a href="../app/markup">Markup</a></li>
+      <li><a href="../app/elements">Elements</a></li>
+      <li><a href="../app/style">Style</a></li>
+      <li><a href="../app/store">Store</a></li>
+      <li><a href="../app/animation">Animation</a></li>
+      <li><a href="../app/dom">Dom操作</a></li>
+    </ul>
+  </nav>
 </header>
+
+{@render children()}
 
 <style>
     header {

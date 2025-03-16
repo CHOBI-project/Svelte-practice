@@ -1,5 +1,4 @@
 <script lang="ts">
-  import Header from "../../parts/Header.svelte";
   import Todos from "./Todos.svelte";
   import TodoFilters from "./TodoFilters.svelte";
 
@@ -69,24 +68,43 @@
   }
 </script>
 
-<Header/>
-<div class="container">
-  <input onkeydown={addTodo} placeholder="Add todo" type="text">
+<div class="section">
+  <h3>TodoApp(お手本)</h3>
 
-  <Todos {filterdTodos} {editTodo} {toggleTodo} />
-  <TodoFilters {setFilter} />
+  <div class="container">
+    <input onkeydown={addTodo} placeholder="Add todo" type="text">
 
-  <p>{remaining()} remaining</p>
-  <button onclick={storageClear}>storage clear</button>
+    <Todos {filterdTodos} {editTodo} {toggleTodo} />
+    <TodoFilters {setFilter} />
+
+    <p>{remaining()} remaining</p>
+    <button onclick={storageClear}>storage clear</button>
+  </div>
 </div>
 
+
+
 <style>
+    h3 {
+        margin-bottom: 0.5rem;
+        color: #ff3c00;
+        border-bottom: 2px dotted lightgray;
+    }
+
+    .section {
+        margin: 1rem 0;
+        padding: 1rem;
+        box-shadow: 1px 2px 3px lightgray,
+        1px 2px 3px lightgray inset;
+        border-radius: 10px;
+    }
+
     .container {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        height: 100vh;
+
     }
 
     input {
