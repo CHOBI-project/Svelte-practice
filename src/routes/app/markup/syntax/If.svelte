@@ -1,9 +1,7 @@
-<!-- js -->
 <script lang="ts">
   let num = $state(0);
 </script>
 
-<!-- html -->
 <div>
     <h3>&#123;#if&#125;...&#123;:else if&#125;...&#123;/if&#125;</h3>
 
@@ -18,7 +16,6 @@
     {/if}
 </div>
 
-<!-- css -->
 <style>
     div {
         margin: 1rem 0;

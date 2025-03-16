@@ -1,4 +1,3 @@
-<!-- js -->
 <script lang="ts">
   let elapsed = $state(0);
   let interval = $state(1000);
@@ -14,7 +13,6 @@
   });
 </script>
 
-<!-- html -->
 <div>
     <h3>$Effect</h3>
 

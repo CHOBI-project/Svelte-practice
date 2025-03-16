@@ -1,4 +1,3 @@
-<!-- js -->
 <script lang="ts">
   let count = $state(0);
   let text = $state("テキスト");
@@ -6,7 +5,6 @@
   $inspect(count, text);
 </script>
 
-<!-- html -->
 <div>
     <h3>$Inspect</h3>
     <p>

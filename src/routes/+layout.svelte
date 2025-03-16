@@ -7,14 +7,14 @@
 
   <nav>
     <ul>
-      <li><a href="../app/rune">Rune</a></li>
-      <li><a href="../app/markup">Markup</a></li>
-      <li><a href="../app/elements">Elements</a></li>
-      <li><a href="../app/style">Style</a></li>
-      <li><a href="../app/store">Store</a></li>
-      <li><a href="../app/animation">Animation</a></li>
-      <li><a href="../app/dom">Dom操作</a></li>
-      <li><a href="../app/routing">routing</a></li>
+      <li><a href="/app/rune">Rune</a></li>
+      <li><a href="/app/markup">Markup</a></li>
+      <li><a href="/app/elements">Elements</a></li>
+      <li><a href="/app/style">Style</a></li>
+      <li><a href="/app/store">Store</a></li>
+      <li><a href="/app/animation">Animation</a></li>
+      <li><a href="/app/dom">Dom操作</a></li>
+      <li><a href="/app/routing">routing</a></li>
     </ul>
   </nav>
 </header>

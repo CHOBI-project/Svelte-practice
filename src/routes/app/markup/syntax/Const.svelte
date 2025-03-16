@@ -7,19 +7,19 @@
   };
 
   let menus: Menu[] = [
-    { id: 1, name: "ラーメン", price: 1000, quantity: 2 },
-    { id: 2, name: "カレー", price: 0, quantity: 0 },
-    { id: 3, name: "寿司", price: 200, quantity: 4 },
-    { id: 4, name: "焼肉", price: 0, quantity: 0 },
+    {id: 1, name: "ラーメン", price: 1000, quantity: 2},
+    {id: 2, name: "カレー", price: 0, quantity: 0},
+    {id: 3, name: "寿司", price: 200, quantity: 4},
+    {id: 4, name: "焼肉", price: 0, quantity: 0},
   ];
 </script>
 
 <div>
-    <h3>&#123;@const&#125;</h3>
-    {#each menus as menu (menu.id)}
-        {@const total = menu.price * menu.quantity }
-        <p>{menu.name}の合計価格: {total}円</p>
-    {/each}
+  <h3>&#123;@const&#125;</h3>
+  {#each menus as menu (menu.id)}
+    {@const total = menu.price * menu.quantity }
+    <p>{menu.name}の合計価格: {total}円</p>
+  {/each}
 </div>
 
 <!-- css -->

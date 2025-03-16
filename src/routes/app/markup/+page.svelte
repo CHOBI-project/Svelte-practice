@@ -1,17 +1,17 @@
 <script>
-    import If from "./syntax/If.svelte";
-    import Each from "./syntax/Each.svelte";
-    import Key from "./syntax/Key.svelte";
-    import Await from "./syntax/Await.svelte";
-    import Snippet from "./syntax/Snippet.svelte";
-    import Html from "./syntax/Html.svelte";
-    import Const from "./syntax/Const.svelte";
-    import Debug from "./syntax/Debug.svelte";
-    import Bind from "./directive/Bind.svelte";
-    import Use from "./directive/Use.svelte";
-    import Transition from "./directive/Transition.svelte";
-    import InOut from "./directive/InOut.svelte";
-    import Animate from "./directive/Animate.svelte";
+    import If from "$appRoutes/markup/syntax/If.svelte";
+    import Each from "$appRoutes/markup/syntax/Each.svelte";
+    import Key from "$appRoutes/markup/syntax/Key.svelte";
+    import Await from "$appRoutes/markup/syntax/Await.svelte";
+    import Snippet from "$appRoutes/markup/syntax/Snippet.svelte";
+    import Html from "$appRoutes/markup/syntax/Html.svelte";
+    import Const from "$appRoutes/markup/syntax/Const.svelte";
+    import Debug from "$appRoutes/markup/syntax/Debug.svelte";
+    import Bind from "$appRoutes/markup/directive/Bind.svelte";
+    import Use from "$appRoutes/markup/directive/Use.svelte";
+    import Transition from "$appRoutes/markup/directive/Transition.svelte";
+    import InOut from "$appRoutes/markup/directive/InOut.svelte";
+    import Animate from "$appRoutes/markup/directive/Animate.svelte";
 </script>
 
 <svelte:head>

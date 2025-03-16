@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { todos } from "./store.svelte.js"
+  import {todos} from "$appRoutes/dom/todo2/store.svelte";
 
   function editTodoToggle(index: number) {
     todos[index].done = true
