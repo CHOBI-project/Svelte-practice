@@ -1,5 +1,4 @@
 <script>
-    import Header from "../parts/Header.svelte";
     import Footer from "../parts/Footer.svelte";
     import Store from "./Writable.svelte";
     import Readable from "./Readable.svelte";
@@ -12,7 +11,6 @@
     <meta name="description" content="storeについての勉強"/>
 </svelte:head>
 
-<Header/>
 <div class="contents">
     <div class="wrapper">
         <h2>svelte/store</h2>

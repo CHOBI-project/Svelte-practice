@@ -1,7 +1,7 @@
 <script>
-    import Header from "../parts/Header.svelte";
     import Footer from "../parts/Footer.svelte";
     import TodoScreen from "./todo2/TodoScreen.svelte";
+    import TodoDisplay from "./todo1/TodoDisplay.svelte";
 </script>
 
 <svelte:head>
@@ -9,12 +9,12 @@
     <meta name="description" content="Animation作成"/>
 </svelte:head>
 
-<Header/>
 <div class="contents">
     <div class="wrapper">
         <h2>Dom操作</h2>
         <p>svelteのdom操作はbooleanで行うことを推奨している</p>
 
+        <TodoDisplay />
         <TodoScreen />
     </div>
 

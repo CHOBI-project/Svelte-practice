@@ -1,5 +1,4 @@
 <script>
-    import Header from "../parts/Header.svelte";
     import Footer from "../parts/Footer.svelte";
     import Global from "./Global.svelte";
     import Custom from "./Custom.svelte";
@@ -12,7 +11,6 @@
     <meta name="description" content="classについての勉強"/>
 </svelte:head>
 
-<Header/>
 <div class="contents">
     <div class="wrapper">
         <h2>Styling</h2>

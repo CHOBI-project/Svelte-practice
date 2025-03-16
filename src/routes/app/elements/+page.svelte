@@ -1,5 +1,4 @@
 <script>
-import Header from "../parts/Header.svelte";
 import Footer from "../parts/Footer.svelte";
 import Boundary from "./Boundary.svelte";
 import Window from "./Window.svelte";
@@ -14,7 +13,6 @@ import Element from "./Element.svelte";
     <meta name="description" content="Special Elementsについての勉強"/>
 </svelte:head>
 
-<Header/>
 <div class="contents">
     <div class="wrapper">
         <h2>Special Elements</h2>

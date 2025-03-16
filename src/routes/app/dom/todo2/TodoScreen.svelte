@@ -1,6 +1,6 @@
 <script lang="ts">
   import TodoList from "./TodoList.svelte";
-  import {todos} from "./store.svelte"
+  import {todos} from "./store.svelte.js"
 
   let id = $state(1)
 

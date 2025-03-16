@@ -1,14 +1,9 @@
-<script>
-    import Header from "./parts/Header.svelte";
-</script>
-
 <svelte:head>
-    <title>Svelte</title>
+  <title>Svelte</title>
 </svelte:head>
 
-<Header/>
 <div>
-    <img src="/src/assets/svelte-horizontal.svg" alt="Svelte" width="600">
+  <img src="/src/assets/svelte-horizontal.svg" alt="Svelte" width="600">
 </div>
 
 <style>
