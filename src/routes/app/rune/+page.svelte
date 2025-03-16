@@ -5,73 +5,59 @@
     import Props from "./Props.svelte";
     import Bindable from "./Bindable.svelte";
     import Inspect from "./Inspect.svelte";
-    import Footer from "../parts/Footer.svelte";
 </script>
 
 <svelte:head>
-    <title>Rune</title>
-    <meta name="description" content="Rune(ルーン)についての勉強"/>
+  <title>Rune</title>
+  <meta name="description" content="Rune(ルーン)についての勉強"/>
 </svelte:head>
 
-<div class="contents">
-    <div class="wrapper">
-        <h2>Rune(ルーン)</h2>
-        <p>Runeは「.svelteファイル」や「.svelte.js/.svelte.tsファイル」で使用するシンボルで、Svelteコンパイラをコントロールします。</p>
+<div class="wrapper">
+  <h2>Rune(ルーン)</h2>
+  <p>Runeは「.svelteファイル」や「.svelte.js/.svelte.tsファイル」で使用するシンボルで、Svelteコンパイラをコントロールします。</p>
 
-        <div class="runes">
-            <ul>
-                <li>
-                    <p class="rune">$state</p>
-                    <p class="desc">reactのuseStateみたいなもの</p>
-                </li>
-                <li>
-                    <p class="rune">$derived</p>
-                    <p class="desc">useStateからの導出(derive)</p>
-                </li>
-                <li>
-                    <p class="rune">$effect</p>
-                    <p class="desc">reactのuseEffectみたいなもの</p>
-                </li>
-                <li>
-                    <p class="rune">$props</p>
-                    <p class="desc">reactのpropsと一緒</p>
-                </li>
-                <li>
-                    <p class="rune">$bindable</p>
-                    <p class="desc">propsを子から親に渡せる(※乱用しない)</p>
-                </li>
-                <li>
-                    <p class="rune">$inspect</p>
-                    <p class="desc">stateの変更時にconsole.logが発火</p>
-                </li>
-                <li>
-                    <p class="rune">$host</p>
-                    <p class="desc"></p>
-                </li>
-            </ul>
-        </div>
+  <div class="runes">
+    <ul>
+      <li>
+        <p class="rune">$state</p>
+        <p class="desc">reactのuseStateみたいなもの</p>
+      </li>
+      <li>
+        <p class="rune">$derived</p>
+        <p class="desc">useStateからの導出(derive)</p>
+      </li>
+      <li>
+        <p class="rune">$effect</p>
+        <p class="desc">reactのuseEffectみたいなもの</p>
+      </li>
+      <li>
+        <p class="rune">$props</p>
+        <p class="desc">reactのpropsと一緒</p>
+      </li>
+      <li>
+        <p class="rune">$bindable</p>
+        <p class="desc">propsを子から親に渡せる(※乱用しない)</p>
+      </li>
+      <li>
+        <p class="rune">$inspect</p>
+        <p class="desc">stateの変更時にconsole.logが発火</p>
+      </li>
+      <li>
+        <p class="rune">$host</p>
+        <p class="desc"></p>
+      </li>
+    </ul>
+  </div>
 
-        <State/>
-        <Derived/>
-        <Effect/>
-        <Props/>
-        <Bindable/>
-        <Inspect/>
-    </div>
-
-    <Footer/>
+  <State/>
+  <Derived/>
+  <Effect/>
+  <Props/>
+  <Bindable/>
+  <Inspect/>
 </div>
 
 <style>
-    .contents {
-        position: absolute;
-        top: 8%;
-        left: 0;
-        width: 100%;
-        height: 92%;
-        overflow-y: scroll;
-    }
-
     .wrapper {
         padding: 1rem;
     }

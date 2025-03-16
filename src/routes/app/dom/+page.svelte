@@ -1,41 +1,27 @@
 <script>
-    import Footer from "../parts/Footer.svelte";
     import TodoScreen from "./todo2/TodoScreen.svelte";
     import TodoDisplay from "./todo1/TodoDisplay.svelte";
 </script>
 
 <svelte:head>
-    <title>Animation</title>
-    <meta name="description" content="Animation作成"/>
+  <title>Dom</title>
+  <meta name="description" content="Animation作成"/>
 </svelte:head>
 
-<div class="contents">
-    <div class="wrapper">
-        <h2>Dom操作</h2>
-        <p>svelteのdom操作はbooleanで行うことを推奨している</p>
+<div class="wrapper">
+  <h2>Dom操作</h2>
+  <p>svelteのdom操作はbooleanで行うことを推奨している</p>
 
-        <TodoDisplay />
-        <TodoScreen />
-    </div>
-
-    <Footer/>
+  <TodoDisplay/>
+  <TodoScreen/>
 </div>
 
 <style>
-    .contents {
-        position: absolute;
-        top: 8%;
-        left: 0;
-        width: 100%;
-        height: 92%;
-        overflow-y: scroll;
+    .wrapper {
+        padding: 1rem;
+    }
 
-        .wrapper {
-            padding: 1rem;
-        }
-
-        h2 {
-            color: #ff3f00;
-        }
+    h2 {
+        color: #ff3f00;
     }
 </style>
