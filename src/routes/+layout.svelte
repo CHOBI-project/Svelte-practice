@@ -15,6 +15,7 @@
       <li><a href="/app/animation">Animation</a></li>
       <li><a href="/app/dom">Dom操作</a></li>
       <li><a href="/app/routing">routing</a></li>
+      <li><a href="/app/form">form</a></li>
     </ul>
   </nav>
 </header>
