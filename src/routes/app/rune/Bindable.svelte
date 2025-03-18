@@ -23,7 +23,6 @@
             margin-bottom: 0.5rem;
             color: #ff3c00;
             border-bottom: 2px dotted lightgray;
-
         }
     }
 </style>

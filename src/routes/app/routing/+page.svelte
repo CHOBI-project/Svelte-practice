@@ -11,7 +11,7 @@
   <h2>routing</h2>
   <p>svelteのルーティングの仕方</p>
 
-  {#each data.summaries as item}
+  {#each data.summaries as item (item.id)}
     <a href="/app/routing/{item.directory}">
       <div class="item">
         <div>id: {item.id}</div>
