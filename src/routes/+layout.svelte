@@ -16,6 +16,7 @@
       <li><a href="/app/dom">Dom操作</a></li>
       <li><a href="/app/routing">routing</a></li>
       <li><a href="/app/form">form</a></li>
+      <li><a href="/app/crud">crud</a></li>
     </ul>
   </nav>
 </header>
