@@ -17,6 +17,7 @@
       <li><a href="/app/routing">routing</a></li>
       <li><a href="/app/form">form</a></li>
       <li><a href="/app/crud">crud</a></li>
+      <li><a href="/app/redirect">redirect</a></li>
     </ul>
   </nav>
 </header>
