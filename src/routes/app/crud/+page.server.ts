@@ -1,7 +1,7 @@
-import * as crudDB from "$appRoutes/crud/database";
+import * as chatDB from "$appRoutes/crud/chatDB";
 
 export function load() {
-  const data = crudDB.getChatMessages() || [];
+  const data = chatDB.getChatMessages() || [];
   
   return {
     chatDataBase: data,

@@ -1,17 +1,16 @@
 <script lang="ts">
-  import type {MessageModel} from "$appRoutes/crud/database";
+  import type { ChatModel } from "$appRoutes/crud/chatDB";
 
-  let {data} = $props();
+  let { data } = $props();
 
-  /*流れ +page.svelte → データ送信
-            +server.ts → 各methodが受け取り処理
-             database.ts → 切り分け処理
-                +server.ts → 加工データを返す
-                  +page.svelte → データ受け取り
-   */
+  /* +page.svelte(データ送信) →
+        +server.ts(各methodが受け取り処理) →
+             chatDB.ts(切り分け処理) →
+                 +server.ts(加工データを返す) →
+                    +page.svelte(データ受け取り)
+  */
 
   // ロード時に取得(+page.server.tsから)
-
   async function messagePost(event: KeyboardEvent) {
     if (event.key !== "Enter") return;
 
@@ -31,10 +30,10 @@
 
     //レスポンス内容(+server.tsから)
     const result = await response.json();
+    console.log(result);
+
     //ロード時取得データを更新
     data = {chatDataBase: [...result]};
-
-    console.log(result, data);
 
     element.value = "";
   }
@@ -50,16 +49,18 @@
 
     const result = await response.json();
     console.log(result);
+
     data = {chatDataBase: [...result]};
   }
 
   async function editToggle(id: string) {
-    //取得
+    //取得(GET)
     const response = await fetch("/app/crud");
     //データ
     const result = await response.json();
+    console.log(result);
     //特定のデータ切り出し
-    const edited = result.map((chat: MessageModel) => chat.id === id ? {...chat, edit: true} : chat);
+    const edited = result.map((chat: ChatModel) => chat.id === id ? {...chat, edit: true} : chat);
     //再代入更新
     data = {chatDataBase: edited};
   }
@@ -75,6 +76,7 @@
 
     const result = await response.json();
     console.log(result);
+
     data = {chatDataBase: [...result]};
   }
 </script>

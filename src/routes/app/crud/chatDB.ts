@@ -1,19 +1,19 @@
-export type MessageModel = {
+export type ChatModel = {
   id: string;
   message: string;
   edit: boolean;
 }
 
-const chatDatabase: MessageModel[] = [];
+const chatDB: ChatModel[] = [];
 
 export function getChatMessages() {
-  return chatDatabase;
+  return chatDB;
 }
 
 export function createChatMessage(message: string) {
   if (!message) return;
   
-  chatDatabase.push({
+  chatDB.push({
     id: crypto.randomUUID(),
     message: message,
     edit: false
@@ -21,7 +21,7 @@ export function createChatMessage(message: string) {
 }
 
 export function editChatMessage(id: string, editMessage: string) {
-  const target = chatDatabase.find((chat) => chat.id === id);
+  const target = chatDB.find((chat) => chat.id === id);
   if (!target) return;
   
   target.message = editMessage;
@@ -29,6 +29,6 @@ export function editChatMessage(id: string, editMessage: string) {
 }
 
 export function deleteChatMessage(id: string) {
-  const index = chatDatabase.findIndex((chat) => chat.id === id);
-  chatDatabase.splice(index, 1);
+  const index = chatDB.findIndex((chat) => chat.id === id);
+  chatDB.splice(index, 1);
 }
