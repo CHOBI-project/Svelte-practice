@@ -1,8 +1,8 @@
 <script>
-    import Style from "$appRoutes/style/Style.svelte";
-    import Global from "$appRoutes/style/Global.svelte";
-    import Custom from "$appRoutes/style/Custom.svelte";
-    import Class from "$appRoutes/style/Class.svelte";
+import Class from "$appRoutes/style/Class.svelte";
+import Custom from "$appRoutes/style/Custom.svelte";
+import Global from "$appRoutes/style/Global.svelte";
+import Style from "$appRoutes/style/Style.svelte";
 </script>
 
 <svelte:head>

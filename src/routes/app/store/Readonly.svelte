@@ -1,9 +1,9 @@
 <script lang="ts">
-  import {readonly, writable} from "svelte/store";
+import { readonly, writable } from "svelte/store";
 
-  //countは編集、readOnlyは表示で使う
-  const count = writable(0);
-  const readOnlyCount = readonly(count);
+//countは編集、readOnlyは表示で使う
+const count = writable(0);
+const readOnlyCount = readonly(count);
 </script>
 
 <div>

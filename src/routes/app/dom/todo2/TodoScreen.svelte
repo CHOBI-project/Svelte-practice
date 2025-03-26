@@ -1,25 +1,23 @@
 <script lang="ts">
-  import {todos} from "$appRoutes/dom/todo2/store.svelte";
-  import TodoList from "$appRoutes/dom/todo2/TodoList.svelte";
+import TodoList from "$appRoutes/dom/todo2/TodoList.svelte";
+import { todos } from "$appRoutes/dom/todo2/store.svelte";
 
-  let id = $state(1)
+let id = $state(1);
 
-  function addTodo(event: KeyboardEvent) {
-    if (event.key !== 'Enter') return
+function addTodo(event: KeyboardEvent) {
+	if (event.key !== "Enter") return;
 
-    const eventEl = event.target as HTMLInputElement
-    if (!eventEl.value.trim()) return
+	const eventEl = event.target as HTMLInputElement;
+	if (!eventEl.value.trim()) return;
 
-    todos.push(
-        {
-          id: id.toString(),
-          title: eventEl.value,
-          done: false
-        }
-    )
-    eventEl.value = ""
-    id++
-  }
+	todos.push({
+		id: id.toString(),
+		title: eventEl.value,
+		done: false,
+	});
+	eventEl.value = "";
+	id++;
+}
 </script>
 
 <div class="section">

@@ -1,16 +1,16 @@
 <script lang="ts">
-  let elapsed = $state(0);
-  let interval = $state(1000);
+let elapsed = $state(0);
+const interval = $state(1000);
 
-  $effect(() => {
-    const id = setInterval(() => {
-      elapsed++;
-    }, interval);
+$effect(() => {
+	const id = setInterval(() => {
+		elapsed++;
+	}, interval);
 
-    return () => {
-      clearInterval(id);
-    }
-  });
+	return () => {
+		clearInterval(id);
+	};
+});
 </script>
 
 <div>

@@ -1,15 +1,15 @@
 <script lang="ts">
-  import { flip } from "svelte/animate";
+import { flip } from "svelte/animate";
 
-  let items = [
-    { id: 1, text: "🍎 Apple" },
-    { id: 2, text: "🍌 Banana" },
-    { id: 3, text: "🍇 Grape" }
-  ];
+let items = [
+	{ id: 1, text: "🍎 Apple" },
+	{ id: 2, text: "🍌 Banana" },
+	{ id: 3, text: "🍇 Grape" },
+];
 
-  function shuffle() {
-    items = items.sort(() => Math.random() - 0.5);
-  }
+function shuffle() {
+	items = items.sort(() => Math.random() - 0.5);
+}
 </script>
 
 <div>

@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { count } from "$lib/store"
+import { count } from "$lib/store";
 </script>
 
 <div>

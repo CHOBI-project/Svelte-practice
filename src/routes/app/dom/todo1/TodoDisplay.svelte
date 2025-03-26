@@ -1,71 +1,74 @@
 <script lang="ts">
-  import Todos from "$appRoutes/dom/todo1/Todos.svelte";
-  import TodoFilters from "$appRoutes/dom/todo1/TodoFilters.svelte";
+import TodoFilters from "$appRoutes/dom/todo1/TodoFilters.svelte";
+import Todos from "$appRoutes/dom/todo1/Todos.svelte";
 
-  type Todo = {
-    text: string
-    done: boolean
-  }
+type Todo = {
+	text: string;
+	done: boolean;
+};
 
-  type Filters = 'all' | 'active' | 'completed'
+type Filters = "all" | "active" | "completed";
 
-  let todos = $state<Todo[]>([])
-  let filter = $state<Filters>('all')
-  let filterdTodos = $derived(filterTodos())
+let todos = $state<Todo[]>([]);
+let filter = $state<Filters>("all");
+const filterdTodos = $derived(filterTodos());
 
-  $effect(() => {
-    const savedTodos = localStorage.getItem('todos')
-    savedTodos && (todos = JSON.parse(savedTodos))
-  })
+$effect(() => {
+	const savedTodos = localStorage.getItem("todos");
+	// biome-ignore lint/suspicious/noAssignInExpressions: <explanation>
+	savedTodos && (todos = JSON.parse(savedTodos));
+});
 
-  $effect(() => {
-    localStorage.setItem('todos', JSON.stringify(todos))
-  })
+$effect(() => {
+	localStorage.setItem("todos", JSON.stringify(todos));
+});
 
-  function addTodo(event: KeyboardEvent) {
-    if (event.key !== 'Enter') return
+function addTodo(event: KeyboardEvent) {
+	if (event.key !== "Enter") return;
 
-    const eventEl = event.target as HTMLInputElement
-    if (!eventEl.value.trim()) return;
+	const eventEl = event.target as HTMLInputElement;
+	if (!eventEl.value.trim()) return;
 
-    todos.push({text: eventEl.value, done: false})
-    eventEl.value = ''
-  }
+	todos.push({ text: eventEl.value, done: false });
+	eventEl.value = "";
+}
 
-  function editTodo(event: Event) {
-    const inputEl = event.target as HTMLInputElement
-    const index = +inputEl.dataset.index!　//+文字列を数値に変換, !null,undefined出ないと保証する
-    todos[index].text = inputEl.value
-  }
+function editTodo(event: Event) {
+	const inputEl = event.target as HTMLInputElement;
+	// biome-ignore lint/style/noNonNullAssertion: <explanation>
+	const index = +inputEl.dataset.index!; //+文字列を数値に変換, !null,undefined出ないと保証する
+	todos[index].text = inputEl.value;
+}
 
-  function toggleTodo(event: Event) {
-    const inputEl = event.target as HTMLInputElement
-    const index = +inputEl.dataset.index!
-    todos[index].done = !todos[index].done
-  }
+function toggleTodo(event: Event) {
+	const inputEl = event.target as HTMLInputElement;
+	// biome-ignore lint/style/noNonNullAssertion: <explanation>
+	const index = +inputEl.dataset.index!;
+	todos[index].done = !todos[index].done;
+}
 
-  function setFilter(newFilters: Filters) {
-    filter = newFilters
-  }
+function setFilter(newFilters: Filters) {
+	filter = newFilters;
+}
 
-  function filterTodos() {
-    switch (filter) {
-      case 'all':
-        return todos
-      case 'active':
-        return todos.filter((todo) => !todo.done)
-      case 'completed':
-        return todos.filter((todo) => todo.done)
-    }
-  }
+function filterTodos() {
+	switch (filter) {
+		case "all":
+			return todos;
+		case "active":
+			return todos.filter((todo) => !todo.done);
+		case "completed":
+			return todos.filter((todo) => todo.done);
+	}
+}
 
-  function remaining() {
-    return todos.filter((todo) => !todo.done).length
-  }
+function remaining() {
+	return todos.filter((todo) => !todo.done).length;
+}
 
-  function storageClear() {
-    window.localStorage.clear()
-  }
+function storageClear() {
+	window.localStorage.clear();
+}
 </script>
 
 <div class="section">

@@ -1,8 +1,8 @@
 <script>
-    import Writable from "$appRoutes/store/Writable.svelte";
-    import Readable from "$appRoutes/store/Readable.svelte";
-    import Readonly from "$appRoutes/store/Readonly.svelte";
-    import Derived from "$appRoutes/rune/Derived.svelte";
+import Derived from "$appRoutes/rune/Derived.svelte";
+import Readable from "$appRoutes/store/Readable.svelte";
+import Readonly from "$appRoutes/store/Readonly.svelte";
+import Writable from "$appRoutes/store/Writable.svelte";
 </script>
 
 <svelte:head>

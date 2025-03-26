@@ -1,27 +1,27 @@
 <script lang="ts">
-  let bgColor: string = "#ffcc00";
-  let flag: boolean = true;
+const bgColor = "#ffcc00";
+const flag = true;
 
-  const myAction = (node: HTMLElement, bgColor: string) => {
-    // 初回適用
-    node.style.backgroundColor = bgColor;
+const myAction = (node: HTMLElement, bgColor: string) => {
+	// 初回適用
+	node.style.backgroundColor = bgColor;
 
-    return {
-      //更新時に適用
-      update(newBgColor: string) {
-        node.style.backgroundColor = newBgColor;
-        node.style.color = "#fff";
-        node.style.borderRadius = "5px";
-        node.style.boxShadow = "3px 3px 5px gray"
-      },
+	return {
+		//更新時に適用
+		update(newBgColor: string) {
+			node.style.backgroundColor = newBgColor;
+			node.style.color = "#fff";
+			node.style.borderRadius = "5px";
+			node.style.boxShadow = "3px 3px 5px gray";
+		},
 
-      //削除時に適用(クリーンアップ)
-      destroy() {
-        console.log("myActionが削除されました！");
-        node.style.backgroundColor = "";
-      }
-    };
-  }
+		//削除時に適用(クリーンアップ)
+		destroy() {
+			console.log("myActionが削除されました！");
+			node.style.backgroundColor = "";
+		},
+	};
+};
 </script>
 
 <div>

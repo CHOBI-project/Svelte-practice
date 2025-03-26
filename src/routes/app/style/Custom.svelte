@@ -1,5 +1,5 @@
 <script>
-    import CustomProperty from "$appRoutes/style/CustomProperty.svelte";
+import CustomProperty from "$appRoutes/style/CustomProperty.svelte";
 </script>
 
 <div>

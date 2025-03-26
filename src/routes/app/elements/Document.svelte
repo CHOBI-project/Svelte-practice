@@ -1,13 +1,13 @@
 <script lang="ts">
-  let isOpen = true;
+let isOpen = true;
 
-  function handleKeydown(event: KeyboardEvent) {
-    if (event.key === "Escape") {
-      isOpen = false;
-    } else if (event.key === "Enter") {
-      isOpen = true;
-    }
-  }
+function handleKeydown(event: KeyboardEvent) {
+	if (event.key === "Escape") {
+		isOpen = false;
+	} else if (event.key === "Enter") {
+		isOpen = true;
+	}
+}
 </script>
 
 <svelte:document onkeydown={handleKeydown} />

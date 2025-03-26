@@ -1,18 +1,18 @@
 <script lang="ts">
-  import {todos} from "$appRoutes/dom/todo2/store.svelte";
+import { todos } from "$appRoutes/dom/todo2/store.svelte";
 
-  function editTodoToggle(index: number) {
-    todos[index].done = true
-  }
+function editTodoToggle(index: number) {
+	todos[index].done = true;
+}
 
-  function updateTodo(index: number, updateText: string) {
-    todos[index].title = updateText
-    todos[index].done = false
-  }
+function updateTodo(index: number, updateText: string) {
+	todos[index].title = updateText;
+	todos[index].done = false;
+}
 
-  function removeTodo(index: number) {
-    todos.splice(index, 1)
-  }
+function removeTodo(index: number) {
+	todos.splice(index, 1);
+}
 </script>
 
 {#each todos as todo, index (todo.id)}
