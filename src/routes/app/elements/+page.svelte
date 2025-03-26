@@ -1,10 +1,10 @@
 <script>
-import Boundary from "$appRoutes/elements/Boundary.svelte";
-import Window from "$appRoutes/elements/Window.svelte";
-import Document from "$appRoutes/elements/Document.svelte";
 import Body from "$appRoutes/elements/Body.svelte";
-import Head from "$appRoutes/elements/Head.svelte";
+import Boundary from "$appRoutes/elements/Boundary.svelte";
+import Document from "$appRoutes/elements/Document.svelte";
 import Element from "$appRoutes/elements/Element.svelte";
+import Head from "$appRoutes/elements/Head.svelte";
+import Window from "$appRoutes/elements/Window.svelte";
 </script>
 
 <svelte:head>

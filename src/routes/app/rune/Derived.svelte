@@ -1,8 +1,8 @@
 <script lang="ts">
-  let numbers = $state([1, 2, 3]);
-  let total = $derived(numbers.reduce((a, c) => a + c, 0));
+const numbers = $state([1, 2, 3]);
+const total = $derived(numbers.reduce((a, c) => a + c, 0));
 
-  const addNumber = () => numbers.push(numbers.length + 1);
+const addNumber = () => numbers.push(numbers.length + 1);
 </script>
 
 <div>

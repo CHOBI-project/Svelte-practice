@@ -1,13 +1,13 @@
 <script lang="ts">
-  let bgColors = ["#fff", "#2c2c2c"];
-  let textColors = ["#000", "#fff"];
-  let index = 0;
+const bgColors = ["#fff", "#2c2c2c"];
+const textColors = ["#000", "#fff"];
+let index = 0;
 
-  function changeBackground() {
-    document.body.style.backgroundColor = bgColors[index];
-    document.body.style.color = textColors[index];
-    index = (index + 1) % bgColors.length;
-  }
+function changeBackground() {
+	document.body.style.backgroundColor = bgColors[index];
+	document.body.style.color = textColors[index];
+	index = (index + 1) % bgColors.length;
+}
 </script>
 
 <svelte:body onclick={changeBackground} />

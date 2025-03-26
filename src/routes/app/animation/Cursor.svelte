@@ -1,29 +1,33 @@
 <script lang="ts">
-  import { onMount } from "svelte";
+import { onMount } from "svelte";
 
-  let spans: { x: number; y: number; rotate: number }[] = [];
-  let number = 20;
-  let pointerX = 0;
-  let pointerY = 0;
-  let container: HTMLDivElement | null = null;
+let spans: { x: number; y: number; rotate: number }[] = [];
+const number = 20;
+let pointerX = 0;
+let pointerY = 0;
+const container: HTMLDivElement | null = null;
 
-  onMount(() => {
-    spans = Array.from({ length: number }, () => ({ x: -100, y: -100, rotate: 0 }));
-  });
+onMount(() => {
+	spans = Array.from({ length: number }, () => ({
+		x: -100,
+		y: -100,
+		rotate: 0,
+	}));
+});
 
-  function handleMouseMove(event: MouseEvent) {
-    if (!container) return;
+function handleMouseMove(event: MouseEvent) {
+	if (!container) return;
 
-    const rect = container.getBoundingClientRect();
-    pointerX = event.clientX - rect.left;
-    pointerY = event.clientY - rect.top;
+	const rect = container.getBoundingClientRect();
+	pointerX = event.clientX - rect.left;
+	pointerY = event.clientY - rect.top;
 
-    spans = spans.map((_, index) => ({
-      x: pointerX - 30,
-      y: pointerY,
-      rotate: pointerY + index * 18,
-    }));
-  }
+	spans = spans.map((_, index) => ({
+		x: pointerX - 30,
+		y: pointerY,
+		rotate: pointerY + index * 18,
+	}));
+}
 </script>
 
 <div>

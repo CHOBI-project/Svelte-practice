@@ -1,84 +1,86 @@
 <script lang="ts">
-  import type { ChatModel } from "$appRoutes/crud/chatDB";
+import type { ChatModel } from "$appRoutes/crud/chatDB";
 
-  let { data } = $props();
+let { data } = $props();
 
-  /* +page.svelte(データ送信) →
+/* +page.svelte(データ送信) →
         +server.ts(各methodが受け取り処理) →
              chatDB.ts(切り分け処理) →
                  +server.ts(加工データを返す) →
                     +page.svelte(データ受け取り)
   */
 
-  // ロード時に取得(+page.server.tsから)
-  async function messagePost(event: KeyboardEvent) {
-    if (event.key !== "Enter") return;
+// ロード時に取得(+page.server.tsから)
+async function messagePost(event: KeyboardEvent) {
+	if (event.key !== "Enter") return;
 
-    const element = event.target as HTMLInputElement;
-    const value = element.value;
+	const element = event.target as HTMLInputElement;
+	const value = element.value;
 
-    if (!value) return;
+	if (!value) return;
 
-    //送信内容(+server.tsへ)
-    const response = await fetch("/app/crud", {
-      method: 'POST',
-      body: JSON.stringify(value),
-      headers: {
-        'Content-Type': 'application/json',
-      }
-    });
+	//送信内容(+server.tsへ)
+	const response = await fetch("/app/crud", {
+		method: "POST",
+		body: JSON.stringify(value),
+		headers: {
+			"Content-Type": "application/json",
+		},
+	});
 
-    //レスポンス内容(+server.tsから)
-    const result = await response.json();
-    console.log(result);
+	//レスポンス内容(+server.tsから)
+	const result = await response.json();
+	console.log(result);
 
-    //ロード時取得データを更新
-    data = {chatDataBase: [...result]};
+	//ロード時取得データを更新
+	data = { chatDataBase: [...result] };
 
-    element.value = "";
-  }
+	element.value = "";
+}
 
-  async function messageDelete(id: string) {
-    const response = await fetch("/app/crud", {
-      method: 'DELETE',
-      body: JSON.stringify(id),
-      headers: {
-        "Content-Type": "application/json",
-      }
-    });
+async function messageDelete(id: string) {
+	const response = await fetch("/app/crud", {
+		method: "DELETE",
+		body: JSON.stringify(id),
+		headers: {
+			"Content-Type": "application/json",
+		},
+	});
 
-    const result = await response.json();
-    console.log(result);
+	const result = await response.json();
+	console.log(result);
 
-    data = {chatDataBase: [...result]};
-  }
+	data = { chatDataBase: [...result] };
+}
 
-  async function editToggle(id: string) {
-    //取得(GET)
-    const response = await fetch("/app/crud");
-    //データ
-    const result = await response.json();
-    console.log(result);
-    //特定のデータ切り出し
-    const edited = result.map((chat: ChatModel) => chat.id === id ? {...chat, edit: true} : chat);
-    //再代入更新
-    data = {chatDataBase: edited};
-  }
+async function editToggle(id: string) {
+	//取得(GET)
+	const response = await fetch("/app/crud");
+	//データ
+	const result = await response.json();
+	console.log(result);
+	//特定のデータ切り出し
+	const edited = result.map((chat: ChatModel) =>
+		chat.id === id ? { ...chat, edit: true } : chat,
+	);
+	//再代入更新
+	data = { chatDataBase: edited };
+}
 
-  async function messagePut(id: string, message: string) {
-    const response = await fetch("/app/crud", {
-      method: "PUT",
-      body: JSON.stringify({id, message}),
-      headers: {
-        "Content-Type": "application/json",
-      }
-    });
+async function messagePut(id: string, message: string) {
+	const response = await fetch("/app/crud", {
+		method: "PUT",
+		body: JSON.stringify({ id, message }),
+		headers: {
+			"Content-Type": "application/json",
+		},
+	});
 
-    const result = await response.json();
-    console.log(result);
+	const result = await response.json();
+	console.log(result);
 
-    data = {chatDataBase: [...result]};
-  }
+	data = { chatDataBase: [...result] };
+}
 </script>
 
 <svelte:head>

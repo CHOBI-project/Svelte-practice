@@ -1,14 +1,14 @@
 <script lang="ts">
-  import { readable } from 'svelte/store';
-  import {count} from "$lib/store";
+import { count } from "$lib/store";
+import { readable } from "svelte/store";
 
-  const time = readable(new Date(), set => {
-    const interval = setInterval(() => {
-      set(new Date());
-    }, 1000);
+const time = readable(new Date(), (set) => {
+	const interval = setInterval(() => {
+		set(new Date());
+	}, 1000);
 
-    return () => clearInterval(interval);
-  });
+	return () => clearInterval(interval);
+});
 </script>
 
 <div>

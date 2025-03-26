@@ -1,5 +1,5 @@
 <script lang="ts">
-  let tag = "";
+const tag = "";
 </script>
 
 <div>

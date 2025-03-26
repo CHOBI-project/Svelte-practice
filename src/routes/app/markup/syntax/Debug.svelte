@@ -1,17 +1,17 @@
 <script lang="ts">
-  type Menu = {
-    id: number,
-    name: string,
-    price: number,
-    quantity: number,
-  };
+type Menu = {
+	id: number;
+	name: string;
+	price: number;
+	quantity: number;
+};
 
-  let menus: Menu[] = [
-    {id: 1, name: "ラーメン", price: 1000, quantity: 2},
-    {id: 2, name: "カレー", price: 0, quantity: 0},
-    {id: 3, name: "寿司", price: 200, quantity: 4},
-    {id: 4, name: "焼肉", price: 0, quantity: 0},
-  ];
+const menus: Menu[] = [
+	{ id: 1, name: "ラーメン", price: 1000, quantity: 2 },
+	{ id: 2, name: "カレー", price: 0, quantity: 0 },
+	{ id: 3, name: "寿司", price: 200, quantity: 4 },
+	{ id: 4, name: "焼肉", price: 0, quantity: 0 },
+];
 </script>
 
 <div>

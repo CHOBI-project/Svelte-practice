@@ -1,8 +1,8 @@
 <script>
-    import {derived, writable} from "svelte/store";
+import { derived, writable } from "svelte/store";
 
-    const count = writable(0);
-    const doubleCount = derived(count, count => count * 2);
+const count = writable(0);
+const doubleCount = derived(count, (count) => count * 2);
 </script>
 
 <div>

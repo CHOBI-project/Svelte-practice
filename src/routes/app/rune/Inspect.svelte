@@ -1,8 +1,8 @@
 <script lang="ts">
-  let count = $state(0);
-  let text = $state("テキスト");
+const count = $state(0);
+const text = $state("テキスト");
 
-  $inspect(count, text);
+$inspect(count, text);
 </script>
 
 <div>

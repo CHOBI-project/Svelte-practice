@@ -1,5 +1,5 @@
 <script>
-    let count = 0;
+const count = 0;
 </script>
 
 <button type="button" onclick={() => count++}>数量: {count}</button>

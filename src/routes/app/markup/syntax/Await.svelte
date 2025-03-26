@@ -1,18 +1,18 @@
 <script lang="ts">
-  async function roll() {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        if (Math.random() < 0.3) {
-          reject(new Error('Request failed'));
-          return;
-        }
+async function roll() {
+	return new Promise((resolve, reject) => {
+		setTimeout(() => {
+			if (Math.random() < 0.3) {
+				reject(new Error("Request failed"));
+				return;
+			}
 
-        resolve(Math.ceil(Math.random() * 6));
-      }, 1000);
-    });
-  }
+			resolve(Math.ceil(Math.random() * 6));
+		}, 1000);
+	});
+}
 
-  let promise = $state(roll());
+const promise = $state(roll());
 </script>
 
 <div>

@@ -1,5 +1,5 @@
 <script lang="ts">
-  let { setFilter } = $props()
+const { setFilter } = $props();
 </script>
 
 <div class="filters">

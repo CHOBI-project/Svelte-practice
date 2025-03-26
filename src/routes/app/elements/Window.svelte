@@ -1,6 +1,6 @@
 <script lang="ts">
-  let screenWidth = 0;
-  let screenHeight = 0;
+const screenWidth = 0;
+const screenHeight = 0;
 </script>
 
 <svelte:window bind:innerWidth={screenWidth} bind:innerHeight={screenHeight} />

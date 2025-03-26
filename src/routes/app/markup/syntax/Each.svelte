@@ -1,11 +1,9 @@
 <script lang="ts">
-  let menus = $state(
-      [
-        {id: 1, name: "ラーメン", price: 800},
-        {id: 2, name: "寿司", price: 1200},
-        {id: 3, name: "カレー", price: 600},
-      ]
-  );
+const menus = $state([
+	{ id: 1, name: "ラーメン", price: 800 },
+	{ id: 2, name: "寿司", price: 1200 },
+	{ id: 3, name: "カレー", price: 600 },
+]);
 </script>
 
 <div>

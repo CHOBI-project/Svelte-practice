@@ -1,19 +1,19 @@
 <script lang="ts">
-  let count = 0;
-  let hasError = false;
-  let errorMessage = "";
+let count = 0;
+let hasError = false;
+let errorMessage = "";
 
-  function handleClick() {
-    try {
-      if (count >= 5) {
-        throw new Error("カウントの上限を超えました！");
-      }
-      count += 1;
-    } catch (error) {
-      hasError = true;
-      errorMessage = (error as Error).message;
-    }
-  }
+function handleClick() {
+	try {
+		if (count >= 5) {
+			throw new Error("カウントの上限を超えました！");
+		}
+		count += 1;
+	} catch (error) {
+		hasError = true;
+		errorMessage = (error as Error).message;
+	}
+}
 </script>
 
 <div>

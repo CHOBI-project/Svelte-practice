@@ -1,10 +1,10 @@
 <script>
-    import State from "$appRoutes/rune/State.svelte";
-    import Derived from "$appRoutes/rune/Derived.svelte";
-    import Effect from "$appRoutes/rune/Effect.svelte";
-    import Props from "$appRoutes/rune/Props.svelte";
-    import Bindable from "$appRoutes/rune/Bindable.svelte";
-    import Inspect from "$appRoutes/rune/Inspect.svelte";
+import Bindable from "$appRoutes/rune/Bindable.svelte";
+import Derived from "$appRoutes/rune/Derived.svelte";
+import Effect from "$appRoutes/rune/Effect.svelte";
+import Inspect from "$appRoutes/rune/Inspect.svelte";
+import Props from "$appRoutes/rune/Props.svelte";
+import State from "$appRoutes/rune/State.svelte";
 </script>
 
 <svelte:head>

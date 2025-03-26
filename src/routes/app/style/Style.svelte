@@ -1,6 +1,6 @@
 <script lang="ts">
-  const textColor = "gray";
-  const background = "lightblue";
+const textColor = "gray";
+const background = "lightblue";
 </script>
 
 <div>

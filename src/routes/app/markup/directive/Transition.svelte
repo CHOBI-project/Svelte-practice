@@ -1,11 +1,11 @@
 <script lang="ts">
-  import { fade, blur, fly, slide, scale } from 'svelte/transition';
+import { blur, fade, fly, scale, slide } from "svelte/transition";
 
-  let fadeFlag = false;
-  let blurFlag = false;
-  let flyFlag = false;
-  let slideFlag = false;
-  let scaleFlag = false;
+const fadeFlag = false;
+const blurFlag = false;
+const flyFlag = false;
+const slideFlag = false;
+const scaleFlag = false;
 </script>
 
 <div>

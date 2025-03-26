@@ -1,10 +1,10 @@
 <script lang="ts">
-  import {enhance} from "$app/forms";
-  import {slide} from "svelte/transition";
+import { enhance } from "$app/forms";
+import { slide } from "svelte/transition";
 
-  let {data, form} = $props()
-  let creating = $state(false);
-  let deleting = $state(false);
+const { data, form } = $props();
+const creating = $state(false);
+const deleting = $state(false);
 </script>
 
 <svelte:head>
