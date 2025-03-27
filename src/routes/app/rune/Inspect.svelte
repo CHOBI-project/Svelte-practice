@@ -1,6 +1,6 @@
 <script lang="ts">
-const count = $state(0);
-const text = $state("テキスト");
+let count = $state(0);
+let text = $state("テキスト");
 
 $inspect(count, text);
 </script>

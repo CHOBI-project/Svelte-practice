@@ -1,5 +1,5 @@
 <script lang="ts">
-const title = "Elements";
+let title = "Elements";
 </script>
 
 <svelte:head>

@@ -1,6 +1,6 @@
 <script lang="ts">
-const bgColor = "#ffcc00";
-const flag = true;
+let bgColor = "#ffcc00";
+let flag = true;
 
 const myAction = (node: HTMLElement, bgColor: string) => {
 	// 初回適用

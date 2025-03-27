@@ -5,7 +5,7 @@ let spans: { x: number; y: number; rotate: number }[] = [];
 const number = 20;
 let pointerX = 0;
 let pointerY = 0;
-const container: HTMLDivElement | null = null;
+let container: HTMLDivElement | null = null;
 
 onMount(() => {
 	spans = Array.from({ length: number }, () => ({
@@ -33,7 +33,7 @@ function handleMouseMove(event: MouseEvent) {
 <div>
     <h3>Cursor</h3>
 
-    <div class="container" bind:this={container} on:mousemove={handleMouseMove} role="presentation">
+    <div class="container" bind:this={container} onmousemove={handleMouseMove} role="presentation">
         {#each spans as span (span)}
       <span
               style:left={span.x}px

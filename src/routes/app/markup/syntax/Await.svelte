@@ -12,7 +12,7 @@ async function roll() {
 	});
 }
 
-const promise = $state(roll());
+let promise = $state(roll());
 </script>
 
 <div>

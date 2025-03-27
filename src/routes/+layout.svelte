@@ -1,9 +1,11 @@
 <script lang="ts">
-const { children } = $props();
+import siteLogo from "../assets/svelte-horizontal.png";
+
+let { children } = $props();
 </script>
 
 <header>
-  <a href="/"><img src="/src/assets/svelte-horizontal.png" alt="Svelte" width=150></a>
+  <a href="/"><img src={siteLogo} alt="Svelte" width=150></a>
 
   <nav>
     <ul>

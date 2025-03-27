@@ -1,7 +1,7 @@
 <script lang="ts">
 import Key1 from "$appRoutes/markup/syntax/Key1.svelte";
 
-const id = 1;
+let id = 1;
 </script>
 
 <div>

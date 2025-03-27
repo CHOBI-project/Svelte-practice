@@ -1,6 +1,6 @@
 <script lang="ts">
 let elapsed = $state(0);
-const interval = $state(1000);
+let interval = $state(1000);
 
 $effect(() => {
 	const id = setInterval(() => {

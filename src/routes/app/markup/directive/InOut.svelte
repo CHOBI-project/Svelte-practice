@@ -1,8 +1,8 @@
 <script lang="ts">
 import { blur, fade, fly, slide } from "svelte/transition";
 
-const anime1 = false;
-const anime2 = false;
+let anime1 = false;
+let anime2 = false;
 </script>
 
 <div>

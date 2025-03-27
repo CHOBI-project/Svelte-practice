@@ -1,5 +1,5 @@
 <script lang="ts">
-const text = $state("初期テキスト");
+let text = $state("初期テキスト");
 </script>
 
 <div>

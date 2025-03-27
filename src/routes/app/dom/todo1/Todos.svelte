@@ -1,5 +1,5 @@
 <script lang="ts">
-const { filterdTodos, editTodo, toggleTodo } = $props();
+let { filterdTodos, editTodo, toggleTodo } = $props();
 </script>
 
 <div class="todos">

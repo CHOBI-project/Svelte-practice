@@ -1,5 +1,5 @@
 <script lang="ts">
-const num = $state(0);
+let num = $state(0);
 </script>
 
 <div>

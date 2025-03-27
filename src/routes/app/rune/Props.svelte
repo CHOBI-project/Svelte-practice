@@ -1,7 +1,7 @@
 <script lang="ts">
 import Props1 from "$appRoutes/rune/Props1.svelte";
 
-const num = $state(0);
+let num = $state(0);
 </script>
 
 <div>

@@ -3,8 +3,8 @@ import { enhance } from "$app/forms";
 import { slide } from "svelte/transition";
 
 const { data, form } = $props();
-const creating = $state(false);
-const deleting = $state(false);
+let creating = $state(false);
+let deleting = $state(false);
 </script>
 
 <svelte:head>
@@ -13,6 +13,7 @@ const deleting = $state(false);
 </svelte:head>
 
 <div class="wrapper">
+
   <h2>form</h2>
   <p>svelteでのformの使い方</p>
 
