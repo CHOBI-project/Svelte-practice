@@ -19,6 +19,15 @@ const config = {
 		alias: {
 			$appRoutes: path.resolve("./src/routes/app"), //$appは使えない
 		},
+
+		version: {
+			name: "version",
+		},
+
+		paths: {
+			base: "/chobi-project"
+		},
+		
 	},
 };
 
