@@ -1,6 +1,6 @@
 <script lang="ts">
 import siteLogo from "../assets/svelte-horizontal.png";
-export const prerender = true;
+
 let { children } = $props();
 </script>
 
